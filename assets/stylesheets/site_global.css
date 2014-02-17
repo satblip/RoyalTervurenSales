@@ -1,0 +1,127 @@
+/*  
+SatProd Design
+Copyright 2013 - Louis Borsu
+*/
+
+
+/* Generals */
+body {
+	margin: 0;
+	padding: 0;
+	color:#fff;
+	font: normal 90% "Trebuchet MS",Verdana,"Lucida Grande",Tahoma,Arial,Helvetica,Sans-Serif;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+	font-size: 2em;
+	font-weight:bold;
+	color: #FF8B22;
+}
+
+a {
+	font-weight:bold;
+	color:#fff;
+}
+
+
+/* Mise en place des diffÃ©rentes parties / slides */
+#slide_home, #slide0, #slide1, #slide2, #slide3, #slide4, #slide5 {
+	height: 586px;
+	padding-top:100px;
+}
+
+#slide_home {
+	background-color: rgb(35, 31, 32);	
+}
+
+#slide0 {
+	background: url(../images/slide2-bg.jpg) center 0 no-repeat fixed;	
+}
+
+#slide1 {
+	background: url(../images/slide_event.jpg) center 0 no-repeat fixed;
+	 	-webkit-background-size: cover; /* pour Chrome et Safari */
+  		-moz-background-size: cover; /* pour Firefox */
+  		-o-background-size: cover; /* pour Opera */
+  		background-size: cover; /* version standardisée */	
+}
+
+#slide2 {
+	background: url(../images/slide2-bg.jpg) center 0 no-repeat fixed;
+}
+
+#slide3 {
+	background: url(../images/slide3-bg.jpg) center 0 no-repeat fixed;
+}
+
+#slide4 {
+	background: url(../images/slide3-bg.jpg) center 0 no-repeat fixed;
+}
+
+#slide5 {
+	background: url(../images/slide3-bg.jpg) center 0 no-repeat fixed;
+}
+
+
+/* Gestion du contenu */
+.slide_inside {
+	width: 980px;
+	margin: 0 auto;
+}
+
+#slide_home  .slide_inside {
+	text-align:center;
+}
+
+#slide1 .slide_inside {
+	background-color: rgba(0, 0, 0, 0.5);
+	margin-top:2%;
+	margin-bottom: 50px;
+	padding:4%;
+}
+
+#slide2 .slide_inside p {
+	width: 500px;
+	text-align:justify;
+}
+
+#slide3 .slide_inside {
+	background-color: rgba(0, 0, 0, 0.5);
+	margin-top:50px;
+	padding:50px;
+}
+
+#logo
+{
+	margin-top: 10%;
+}
+
+#header span {
+
+}
+
+#header span:hover {
+	text-decoration: underline;
+}
+
+/* Sticky footer and header */
+#header {
+	height:30px;
+    background-color: rgb(34, 30, 31);
+    border:0px;
+    margin:0px auto;
+	width:100%;
+    position:fixed;
+    top:0px;
+}
+
+#footer {
+	height:30px;
+    background-color: rgb(34, 30, 31);
+    border:0px;
+    margin:0px auto;
+	width:100%;
+    position:fixed;
+    bottom:0px;
+}

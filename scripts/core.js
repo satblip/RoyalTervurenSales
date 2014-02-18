@@ -35,16 +35,29 @@ $(window).load(function(){
 
 
 
-/* ---------- Menu to Anchors ---------- */
+ // ---------- Menu to Anchors ---------- 
 /* Function */
 function scrollToAnchor(aid){
 	var aTag = $("a[name='"+ aid +"']");
     $('html,body').animate({scrollTop: aTag.offset().top},'slow');
 }
 
+$( "#blocmenu" ).click(function() {
+  $( "#pageacceuil" ).slideUp('slow');
+  
+  setTimeout(function() {
+  	$('#blocmenu').css('position', 'fixed');
+  	$('#blocmenu').css('top', '0');
+  	$('#wrap').show('slow');
+  	$('#enterwebsite').hide();
+  	$('#header').show();
+  }, 600);
+
+});
+
 /* Link triggers */
 $('#link_home').click(function(){
-	scrollToAnchor("Home")
+	scrollToAnchor("Home");
 });
 $('#link0').click(function(){
 	scrollToAnchor("Spirit")
@@ -66,4 +79,41 @@ $('#link5').click(function(){
 });
 /* ---------- EO Menu to Anchors ---------- */
 
+
+
+/* ---------- EO Resize et Sizing de la page ---------- */
+
 });
+
+/* ---------- Resize et Sizing de la page ---------- */
+$(window).resize(function(){
+	sizingPage();
+});
+
+$(window).load(function(){
+	sizingPage();
+});
+
+
+var sizingPage = function()
+{
+	var docWidth = document.outerWidth || document.documentElement.clientWidth;
+	var docHeight = document.outerHeight || document.documentElement.clientHeight;
+	console.log(docWidth + " - " + docHeight);
+	var marginWidth = Math.ceil((docWidth*0.2)/2);
+	var marginheight = Math.ceil((docHeight*0.2)/2);
+	if (marginheight < 60){
+		marginheight = 60;
+	};
+	var contentheight = Math.ceil((docHeight*0.79));
+	var contentwidth = Math.ceil((docWidth*0.79));
+	console.log(marginWidth + " - " + marginheight);
+	$('.acceuila').css("height", marginheight);
+	$('.acceuilb').css("height", marginheight);
+	$('.acceuilstuff').css("height", contentheight-60);
+	$('.acceuilstuff').css("width", contentwidth);
+	$('.acca').css("width", marginWidth);
+	$('.accb').css("width", marginWidth);
+	$('.resize').css("padding-left", marginWidth);
+	$('.resize').css("padding-right", marginWidth);
+}

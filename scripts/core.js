@@ -51,6 +51,7 @@ $( "#blocmenu" ).click(function() {
   	$('#wrap').show('slow');
   	$('#enterwebsite').hide();
   	$('#header').show();
+  	$('.footer').show();
   }, 600);
 
 });

@@ -5,8 +5,15 @@ Copyright 2013 - Louis Borsu
 
 
 /* Generals */
-body {
-	margin: 0;
+
+/* Colors 
+blanc = #ffffff
+noir = #010101
+
+*/
+/*body {
+	background-color: rgb(1, 1, 1);
+	
 	padding: 0;
 	color:#fff;
 	font: normal 90% "Trebuchet MS",Verdana,"Lucida Grande",Tahoma,Arial,Helvetica,Sans-Serif;
@@ -22,21 +29,31 @@ h2 {
 a {
 	font-weight:bold;
 	color:#fff;
+}*/
+
+#main{
+	position:absolute; 
+	top:50%;
+	max-height:500px; 
+	margin-top:-360px;
+	left:50%;
+	width:980px;
+	margin-left:-490px;
 }
 
 
 /* Mise en place des diffÃ©rentes parties / slides */
 #slide_home, #slide0, #slide1, #slide2, #slide3, #slide4, #slide5 {
-	height: 586px;
+	/*height: 586px;*/
 	padding-top:100px;
 }
 
 #slide_home {
-	background-color: rgb(35, 31, 32);	
+		
 }
 
 #slide0 {
-	background: url(../images/slide2-bg.jpg) center 0 no-repeat fixed;	
+	background: url(../images/slide1-bg.jpg) center 0 no-repeat fixed;	
 }
 
 #slide1 {
@@ -97,31 +114,5 @@ a {
 	margin-top: 10%;
 }
 
-#header span {
 
-}
 
-#header span:hover {
-	text-decoration: underline;
-}
-
-/* Sticky footer and header */
-#header {
-	height:30px;
-    background-color: rgb(34, 30, 31);
-    border:0px;
-    margin:0px auto;
-	width:100%;
-    position:fixed;
-    top:0px;
-}
-
-#footer {
-	height:30px;
-    background-color: rgb(34, 30, 31);
-    border:0px;
-    margin:0px auto;
-	width:100%;
-    position:fixed;
-    bottom:0px;
-}

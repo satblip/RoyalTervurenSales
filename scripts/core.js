@@ -44,13 +44,13 @@ function scrollToAnchor(aid){
 
 $( "#blocmenu" ).click(function() {
   $( "#pageacceuil" ).slideUp('slow');
-  
+  $('#enterwebsite').hide('slow');
+  $('#header').show('slow');
   setTimeout(function() {
   	$('#blocmenu').css('position', 'fixed');
   	$('#blocmenu').css('top', '0');
   	$('#wrap').show('slow');
-  	$('#enterwebsite').hide();
-  	$('#header').show();
+  	
   	$('.footer').show();
   }, 600);
 

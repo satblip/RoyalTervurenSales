@@ -12,6 +12,12 @@ noir = #010101
 
 */
 
+@font-face{
+font-family: cali;
+src: url('../font/cali.ttf'),
+} 
+
+
 body {
 	background-color: rgb(1, 1, 1);
 	margin: 0;
@@ -21,12 +27,20 @@ body {
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
 }
 
+
+.dessous {
+	z-index: -20 !important;
+}
+
 .acceuil div{
 	display: inline-block;
 }
 
 .acceuila{
 	margin: 0;
+	font-family: cali;
+	font-size: 40px;
+	text-align: center;
 }
 .acceuilb{
 	margin: 0;
@@ -44,6 +58,24 @@ body {
 	height: 60px;
 	width: 100%;
 	background-color: rgb(1, 1, 1);
+	position: absolute;
+	bottom: 0;
+
+}
+
+.transition {
+	transition: all 0.2s;
+	-moz-transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+}
+
+.all {
+	z-index: 20;
+}
+
+.menutop {
+	position: fixed !important;
+	top: 0;
 }
 
 .ligneblanche {

@@ -43,18 +43,16 @@ function scrollToAnchor(aid){
 }
 
 $( "#blocmenu" ).click(function() {
-  $( "#pageacceuil" ).slideUp('slow');
-  $('#enterwebsite').hide('slow');
-  $('#header').show('slow');
+	menubouge(); /* SA BUG AVEC CECI  ( la fonction est tout en bas*/
+  	$('#pageacceuil').hide();
+  	$('#titreacceuil').hide();
   setTimeout(function() {
-  	$('#blocmenu').css('position', 'fixed');
-  	$('#blocmenu').css('top', '0');
-  	$('#wrap').show('slow');
-  	
+ 	$('#wrap').show('slow');
   	$('.footer').show();
   }, 600);
 
 });
+
 
 /* Link triggers */
 $('#link_home').click(function(){
@@ -111,10 +109,22 @@ var sizingPage = function()
 	console.log(marginWidth + " - " + marginheight);
 	$('.acceuila').css("height", marginheight);
 	$('.acceuilb').css("height", marginheight);
-	$('.acceuilstuff').css("height", contentheight-60);
+	$('.acceuilstuff').css("height", contentheight-60-marginheight);
 	$('.acceuilstuff').css("width", contentwidth);
 	$('.acca').css("width", marginWidth);
 	$('.accb').css("width", marginWidth);
 	$('.resize').css("padding-left", marginWidth);
 	$('.resize').css("padding-right", marginWidth);
+}
+
+/* ---------- Resize et Sizing de la page ---------- */
+
+var menubouge = function()
+{
+	var docHeight = document.outerHeight || document.documentElement.clientHeight;
+	
+
+	var hauteurabouger = Math.ceil((docHeight-6-6-40));
+	$('#blocmenu').css('transform', 'translateY('+hauteurabouger+')')
+	console.log('tessst'+hauteurabouger);
 }

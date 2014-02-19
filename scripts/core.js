@@ -80,10 +80,6 @@ $('#link5').click(function(){
 
 
 
-/* ---------- EO Resize et Sizing de la page ---------- */
-
-});
-
 /* ---------- Resize et Sizing de la page ---------- */
 $(window).resize(function(){
 	sizingPage();
@@ -92,6 +88,7 @@ $(window).resize(function(){
 $(window).load(function(){
 	sizingPage();
 });
+
 
 
 var sizingPage = function()
@@ -125,6 +122,10 @@ var menubouge = function()
 	
 
 	var hauteurabouger = Math.ceil((docHeight-6-6-40));
-	$('#blocmenu').css('transform', 'translateY('+hauteurabouger+')')
+	$('#blocmenu').css('transform', 'translateY(-'+hauteurabouger+'px)')
 	console.log('tessst'+hauteurabouger);
 }
+
+/* ---------- EO Resize et Sizing de la page ---------- */
+
+});

@@ -1,10 +1,14 @@
+function horizontalNavigation(position, event) {
+	var docloo = document.outerWidth || document.documentElement.clientWidth;
+	var docok = Math.ceil((docloo+3));
+    $('html').animate({scrollLeft:(docok*position)}, 600);
+    event.preventDefault();
+}
+
 $(document).ready(function(){   
 // $('#slide_home').parallax("center", 0, 0.1, true);
 // $('#slide0').parallax("center", 650, 0.1, true);
 // $('#slide1').parallax("center", 1300, 0.1, true);
-
-
-
 
 
 /* ---------- Resize Regarding Browser Height ---------- */
@@ -39,42 +43,50 @@ $(window).load(function(){
 /* Function */
 function scrollToAnchor(aid){
 	var aTag = $("a[name='"+ aid +"']");
-    $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+	var docWidth = document.outerWidth || document.documentElement.clientWidth;
+    $('html,body').animate({scrollTo: aTag.offset().top},600);
 }
 
 $( "#blocmenu" ).click(function() {
-	menubouge(); /* SA BUG AVEC CECI  ( la fonction est tout en bas*/
+	menubouge();
   	$('#pageacceuil').hide();
   	$('#titreacceuil').hide();
+  	$('#wrap').show('slow');
+  	$( ".noir" ).removeClass( "noir" ).addClass( "blanc textenoir" );
+  	$( ".ligneblanche" ).removeClass( "ligneblanche" ).addClass( "lignenoir" );
+  	$('#wrap').addClass('margins')
   setTimeout(function() {
- 	$('#wrap').show('slow');
+ 	$('#blocmenu').removeClass('transition')
   	$('.footer').show();
-  }, 600);
+  }, 400);
 
 });
 
 
 /* Link triggers */
 $('#link_home').click(function(){
-	scrollToAnchor("Home");
+	
+	horizontalNavigation(0, event);
 });
 $('#link0').click(function(){
-	scrollToAnchor("Spirit")
+	
+	horizontalNavigation(1, event);
 });
 $('#link1').click(function(){
-	scrollToAnchor("Events")
+	
+	horizontalNavigation(2, event);
 });
 $('#link2').click(function(){
-	scrollToAnchor("Studio")
+	horizontalNavigation(3, event);
 });
 $('#link3').click(function(){
-	scrollToAnchor("Engineering")
+	horizontalNavigation(4, event);
 });
 $('#link4').click(function(){
-	scrollToAnchor("Team")
+	horizontalNavigation(5, event);
 });
 $('#link5').click(function(){
-	scrollToAnchor("Contact")
+	horizontalNavigation(6, event);
 });
 /* ---------- EO Menu to Anchors ---------- */
 
@@ -83,6 +95,8 @@ $('#link5').click(function(){
 /* ---------- Resize et Sizing de la page ---------- */
 $(window).resize(function(){
 	sizingPage();
+	menubouge2();
+	
 });
 
 $(window).load(function(){
@@ -103,6 +117,8 @@ var sizingPage = function()
 	};
 	var contentheight = Math.ceil((docHeight*0.79));
 	var contentwidth = Math.ceil((docWidth*0.79));
+	var contentheightdeux = Math.ceil((contentheight-60));
+	var long = Math.ceil((docWidth*8));
 	console.log(marginWidth + " - " + marginheight);
 	$('.acceuila').css("height", marginheight);
 	$('.acceuilb').css("height", marginheight);
@@ -112,7 +128,13 @@ var sizingPage = function()
 	$('.accb').css("width", marginWidth);
 	$('.resize').css("padding-left", marginWidth);
 	$('.resize').css("padding-right", marginWidth);
+	$('.page').css("width", docWidth);
+	$('.pagein').css("height", contentheightdeux + 'px');
+	$('.all').css("width", long);
 }
+
+
+
 
 /* ---------- Resize et Sizing de la page ---------- */
 
@@ -121,7 +143,18 @@ var menubouge = function()
 	var docHeight = document.outerHeight || document.documentElement.clientHeight;
 	
 
-	var hauteurabouger = Math.ceil((docHeight-6-6-40));
+	var hauteurabouger = Math.ceil((docHeight-5-5-50));
+	$('#blocmenu').css('transform', 'translateY(-'+hauteurabouger+'px)')
+	console.log('tessst'+hauteurabouger);
+}
+
+var menubouge2 = function()
+{
+	var docHeight = document.outerHeight || document.documentElement.clientHeight;
+	
+
+	var hauteurabouger = Math.ceil((docHeight-5-5-50));
+
 	$('#blocmenu').css('transform', 'translateY(-'+hauteurabouger+'px)')
 	console.log('tessst'+hauteurabouger);
 }

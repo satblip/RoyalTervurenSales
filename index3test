@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html class="html">
+<head>
+
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+  <meta name="generator" content="6.0.751.219"/>
+  <title>Royal Tervuren</title>
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <!-- Other scripts -->
+  <!--[if !IE 7]>
+    <style type="text/css">
+      #wrap {display:table;height:100%}
+    </style>
+  <![endif]-->
+</head>
+<body>
+<div id='pageacceuil' class='dessous'>
+<div id='titreacceuil'>
+  <div class='acceuila noir'>
+    <div class='titre'>Le Royal Tervuren</div>
+  </div>
+  <div class='ligneblanche dessous transition'></div>
+</div>
+  <div class='acceuila'></div>
+
+  <div class='acceuil'>
+    <div class='acca noir linbloc'></div>
+    <div class='acceuilstuff linbloc'>
+      
+    </div>
+    <div class='accb noir linbloc'></div>
+  </div>
+
+  <div class='acceuilb'>
+    
+  </div>
+</div>
+
+
+<!-- ----- MENU ------ -->
+
+
+<div id='blocmenu' class="transition noir">
+  
+  <div class='ligneblanche transition'></div>
+  <div class="menu">
+     <div id="header" class="header noir transition">
+      <div class='menucentre'>
+        <span id="link_home">Home</span> | <span id="link0">About</span> | <span id="link1">Pictures</span> | <span id="link2">Interactive Visit</span> | <span id="link3">Services</span> | <span id="link4">Team</span> | <span id="link5">Contact</span>
+      </div>
+    </div>
+  </div>
+  <div id='linsousmenu' class='ligneblanche transition'></div>
+  <div class='interligne'></div>
+</div>
+
+<!-- ----- LE SITE ENTIER EST ICI ------ -->
+
+<div class='all'>
+
+
+    
+  
+
+
+
+  
+  
+<!-- ----- CONTENT ------ -->  
+
+
+
+
+
+
+<div class='acceuilb footer noir' style="display: none">
+<div class='interligne'></div>
+<div class='ligneblanche'></div>
+  Immeuble d'exception
+</div>
+
+
+<!-- <div id="footer">
+ &copy; Copyright 2013 - Satprod Group
+</div> -->
+ 
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<!-- <script type="text/javascript" src="assets/scripts/jquery.parallax-1.1.3.js"></script> -->
+<script type="text/javascript" src="scripts/core.js"></script>
+</body>
+</html>

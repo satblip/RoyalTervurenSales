@@ -24,6 +24,7 @@ body {
 	color:#fff;
 	font: normal 90% "Trebuchet MS",Verdana,"Lucida Grande",Tahoma,Arial,Helvetica,Sans-Serif;
 	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+	overflow: hidden;
 }
 
 .titre{
@@ -94,13 +95,14 @@ body {
 
 .all {
 	z-index: 20;
-	margin-top: 60px;
+	
 /*	width: 700%;*/
 	
 }
 
 .page {
 	position: relative;
+	overflow: auto;
 }
 
 .pagein {

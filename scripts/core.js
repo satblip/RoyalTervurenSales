@@ -1,7 +1,7 @@
 function horizontalNavigation(position, event) {
 	var docloo = document.innerWidth || document.documentElement.clientWidth;
 	var docok = Math.ceil((docloo));
-    $('html').animate({scrollLeft:(docok*position)}, 600);
+    $('html,body').animate({scrollLeft:(docok*position)}, 600);
     event.preventDefault();
 }
 
@@ -117,23 +117,25 @@ var sizingPage = function()
 	};
 	var contentheight = Math.ceil((docHeight*0.79));
 	var contentwidth = Math.ceil((docWidth*0.79));
-	var contentheightdeux = Math.ceil((docHeight*0.70));
-	var margintop = Math.ceil((docHeight*0.06));
+	var contentheightdeux = Math.ceil((docHeight*0.72));
+	var margintop = Math.ceil((docHeight*0.13));
 	var long = Math.ceil((docWidth*8));
-	console.log(marginWidth + " - " + marginheight);
-	$('.acceuila').css("height", marginheight);
-	$('.acceuilb').css("height", marginheight);
-	$('.acceuilstuff').css("height", contentheight-60-marginheight);
-	$('.acceuilstuff').css("width", contentwidth);
-	$('.acca').css("width", marginWidth);
-	$('.accb').css("width", marginWidth);
-	$('.resize').css("padding-left", marginWidth);
-	$('.resize').css("padding-right", marginWidth);
-	$('.page').css("width", docWidth);
-	$('.page').css("top", margintop);
-	$('.page').css("height", contentheightdeux + 'px');
+	console.log(marginWidth + " - " + marginheight + 'px');
+	$('.acceuila').css("height", marginheight + 'px');
+	$('.acceuilb').css("height", marginheight + 'px');
+	$('.acceuilstuff').css("height", contentheight-60-marginheight + 'px');
+	$('.acceuilstuff').css("width", contentwidth + 'px');
+	$('.acca').css("width", marginWidth + 'px');
+	$('.accb').css("width", marginWidth + 'px');
+	$('.resize').css("padding-left", marginWidth + 'px');
+	$('.resize').css("padding-right", marginWidth + 'px');
+	$('.page').css("width", docWidth + 'px');
+	$('.page').css("top", margintop + 'px');
+	$('.footer').css("height", 68 + 'px');
+	$('.page').css("height", contentheightdeux+2 + 'px');
 	$('.pagein').css("height", contentheightdeux + 'px');
-	$('.all').css("width", long);
+	$('.all').css("width", long + 'px');
+	
 }
 
 

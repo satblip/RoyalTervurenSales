@@ -17,19 +17,104 @@ font-family: cali;
 src: url('../font/cali.ttf'),
 } 
 
+@font-face{
+font-family: beba;
+src: url('../font/corp.ttf');
+
+} 
+
+@font-face{
+font-family: eleg;
+src: url('../font/Elegantlight.ttf');
+
+} 
 
 body {
 	margin: 0;
 	padding: 0;
-	color:#fff;
-	font: normal 90% "Trebuchet MS",Verdana,"Lucida Grande",Tahoma,Arial,Helvetica,Sans-Serif;
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+	font: normal 90% thin 'beba' "Lucida Grande",Tahoma,Arial,Helvetica,Sans-Serif;
 	overflow: hidden;
+
 }
+
+h2 {
+	padding-left: 20px;
+	font-size: 25px;
+	text-transform: uppercase;
+}
+
+p {
+	padding-left: 20px;
+}
+
+/* Page Contact Box */
+
+.contactbox {
+	position: fixed;
+	bottom: 20px;
+	right: 0px;
+	z-index: 100;
+	height: 35px;
+	width: 600px;
+	background-color: #010101;
+	color: #fff;
+	font-size: 22px;
+
+}
+
+.divcont{
+	position: relative; ;
+	top: 8px ;
+	left: 8px;
+}
+
+.contactbouts {
+	position: relative;
+	top: 4px;
+}
+
+input[type=submit], input[type=reset] {
+ width:50px;
+ height: 25px;
+ border-radius: 0;
+ margin-left:5px;
+ background-color: #010101;
+ color: #fff;
+ cursor:pointer;
+ border: 1px solid #fff;
+ margin-right: 6px;
+ }
+
+ input[type=text] {
+ width:200px;
+ height: 23px;
+ border-radius: 0;
+ margin-left:12px;
+ background-color: #fff;
+ color: #010101;
+ cursor:pointer;
+ border: 1px solid #333333;
+ margin-right: 0px;
+ }
+
+ input, textarea {
+ width:550px;
+ height: 440px;
+ border-radius: 0;
+ margin-left:12px;
+ background-color: #fff;
+ color: #010101;
+ cursor:pointer;
+ border: 1px solid #333333;
+ margin-right: 0px;
+ }
+
+/* Page Acceuil */
 
 .titre{
 	position: relative;
 	top: 5px;
+	color: #fff;
 }
 
 .dessous {
@@ -57,40 +142,13 @@ body {
 	
 }
 
-.margins {
-	margin-top: 80px;
-}
-
-#blocmenu {
-	z-index: 50;
-	height: 60px;
-	width: 100%;
-	position: fixed;
-	bottom: 0;
-
-}
-
-.blanc {
-	background-color: rgb(255, 255, 255);
-}
-
-.noir {
-	background-color: rgb(1, 1, 1) !important;	
-}
-
-.textenoir {
-	color: #010101;
-}
-
-.menucentre {
+.except {
+	font-size: 22px;
+	text-align: center;
 	position: relative;
-	top: 14px;
-}
-
-.transition {
-	transition: all linear 0.4s;
-	-moz-transition: all linear 0.4s;
-	-webkit-transition: all linear 0.4s;
+	top:12px;
+	color: #010101;
+	z-index: 2
 }
 
 .all {
@@ -110,12 +168,36 @@ body {
 	margin-right: 10%;
 	margin-left: 10%;
 	border: 1px solid #333333;
+	/*text-transform: uppercase;*/
+	text-decoration: none;
+	font-size: 20px;
 }
 
+
+
+
+/* CSS Menu */
 
 .menutop {
 	position: fixed !important;
 	top: 0;
+}
+
+.menucentre {
+	position: relative;
+	top: 14px;
+}
+
+#blocmenu {
+	z-index: 50;
+	height: 60px;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	text-transform: uppercase;
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+
 }
 
 .ligneblanche {
@@ -134,12 +216,12 @@ body {
 .lignenoir {
 	background-color: #010101;
 	width: 100%;
-	height: 4px;
+	height: 3px;
 
 }
 
 .header {
-	font-size: 25px;
+	font-size: 38px;
 	text-align: center;
 	height: 60px;
 	margin: 0;
@@ -155,24 +237,62 @@ body {
 	display: inline-block;
 }
 
+/* general pages */
+
 .resize {
 	margin-top: 0px;
 }
 
-.footer {
-	height: 60px;
-	width: 100%;
-	text-align: center;
-	font-size: 20px;
-	position: fixed;
-	bottom: 0;
+.margins {
+	margin-top: 80px;
+}
+
+
+
+.blanc {
+	background-color: rgb(255, 255, 255);
+}
+
+.noir {
+	background-color: rgb(1, 1, 1) !important;	
+}
+
+.textenoir {
+	color: #010101;
+}
+
+
+.transition {
+	transition: all linear 0.4s;
+	-moz-transition: all linear 0.4s;
+	-webkit-transition: all linear 0.4s;
+}
+
+
+.logopage {
+	width: 250px;
+	height: 100px;
+	background-color: #010101;
+}
+
+/* CSS Page Home */
+
+.page1 {
+	background-image:url('../images/immeuble/20130527_RES_BBRA_PDK-53-M.jpg');
+	background-size:100% 100%;
+	background-image-opacity:0.9; 
 }
 
 /* CSS Page About */
 
 .abouttext {
-	width: 450px;
+	width: 450px; 
+}
 
+.page2 {
+	background-image:url('../images/immeuble/20130527_RES_BBRA_PDK-3-M.jpg');
+	background-size:100% 100%;
+	background-image-opacity:0.8; 
 }
 
 .aboutimg img {
@@ -180,6 +300,35 @@ body {
 	
 
 }
+
+/* CSS Page Description */
+
+.description1 {
+	background: rgba(255,255,255,0.9);
+	height: 68%;
+	width: 80%;
+	position: relative;
+	left: 140px;
+	box-shadow: 5px 5px 0px rgba(1,1,1,0.8);
+}
+
+/* CSS Page Picture */
+
+.page3 {
+	background-image:url('../images/immeuble/20130527_RES_BBRA_PDK-41-M.jpg');
+	background-size:100% 100%;
+	background-image-opacity:0.9; 
+}
+
+/* CSS Page Visite */
+
+.page4 {
+	background-image:url('../images/immeuble/20130527_RES_BBRA_PDK-30-M.jpg');
+	background-size:100% 100%;
+	background-image-opacity:0.9; 
+}
+
+
 /* CSS DES SLIDES */
 
 #slide_home, #slide0, #slide1, #slide2, #slide3, #slide4, #slide5 {
@@ -242,4 +391,20 @@ body {
 	background-color: rgba(0, 0, 0, 0.5);
 	margin-top:50px;
 	padding:50px;
+}
+
+/* Page Contact */
+
+.contact {
+	float: right;
+	padding-right: 30px;
+}
+
+.footer {
+	height: 60px;
+	width: 100%;
+	text-align: left;
+	font-size: 22px;
+	position: fixed;
+	bottom: 0;
 }

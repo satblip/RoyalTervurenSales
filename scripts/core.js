@@ -51,10 +51,11 @@ $( "#blocmenu" ).click(function() {
 	menubouge();
   	$('#pageacceuil').hide();
   	$('#titreacceuil').hide();
-  	$('#wrap').show('slow');
+  	$('#lignemenuhaut').hide();
+  	$('.contactbox').show(500);
+  	$('.all').show(400);
   	$( ".noir" ).removeClass( "noir" ).addClass( "blanc textenoir" );
   	$( ".ligneblanche" ).removeClass( "ligneblanche" ).addClass( "lignenoir" );
-  	$('#wrap').addClass('margins')
   setTimeout(function() {
  	$('#blocmenu').removeClass('transition')
   	$('.footer').show();

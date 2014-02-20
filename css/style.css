@@ -160,7 +160,7 @@ input[type=submit], input[type=reset] {
 
 .page {
 	position: relative;
-	overflow: auto;
+	overflow: hidden;
 }
 
 .pagein {
@@ -275,7 +275,7 @@ input[type=submit], input[type=reset] {
 	background-color: #010101;
 }
 
-/* CSS Page Home */
+/* CSS Page Description */
 
 .page1 {
 	background-image:url('../images/immeuble/20130527_RES_BBRA_PDK-53-M.jpg');
@@ -283,7 +283,16 @@ input[type=submit], input[type=reset] {
 	background-image-opacity:0.9; 
 }
 
-/* CSS Page About */
+.description1 {
+	background: rgba(255,255,255,0.9);
+	height: 68%;
+	width: 80%;
+	position: relative;
+	left: 140px;
+	box-shadow: 5px 5px 0px rgba(1,1,1,0.8);
+}
+
+/* CSS Page Inside */
 
 .abouttext {
 	width: 450px; 
@@ -300,32 +309,64 @@ input[type=submit], input[type=reset] {
 	
 
 }
-
-/* CSS Page Description */
-
-.description1 {
-	background: rgba(255,255,255,0.9);
-	height: 68%;
-	width: 80%;
-	position: relative;
-	left: 140px;
-	box-shadow: 5px 5px 0px rgba(1,1,1,0.8);
-}
-
-/* CSS Page Picture */
+/* CSS Page Inside */
 
 .page3 {
 	background-image:url('../images/immeuble/20130527_RES_BBRA_PDK-41-M.jpg');
 	background-size:100% 100%;
-	background-image-opacity:0.9; 
+	background-image-opacity:0.9;
+	 
 }
 
-/* CSS Page Visite */
+.galleryinside {
+	overflow: auto;
+    float: right;
+    position: relative;
+    right: -80px;
+    margin-right:0;
+    padding-right: 0;
+    overflow: scroll !important;
+    background: transparent;
+	
+
+}
+
+.descr {
+	font-size: 15px;
+	font-family: Arial,sans-serif;
+	
+	float: right;
+	width: 60%;
+	height: 97%;
+	margin: 0px 0px 0px 0px;
+	z-index: 5;
+	overflow-y: auto;
+	overflow-x: hidden !important;
+	background: transparent;
+	padding-bottom: 1%;
+	padding-top: 1%;
+
+}
+
+.gal1 {
+	position: relative;
+	top: 30px;
+}
+ 
+
+
+
+/* CSS Page Design */
 
 .page4 {
 	background-image:url('../images/immeuble/20130527_RES_BBRA_PDK-30-M.jpg');
 	background-size:100% 100%;
 	background-image-opacity:0.9; 
+}
+
+.galhaut{
+	position: relative;
+	top: -70px;
 }
 
 

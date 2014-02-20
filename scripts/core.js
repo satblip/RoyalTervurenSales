@@ -1,6 +1,6 @@
 function horizontalNavigation(position, event) {
-	var docloo = document.outerWidth || document.documentElement.clientWidth;
-	var docok = Math.ceil((docloo+3));
+	var docloo = document.innerWidth || document.documentElement.clientWidth;
+	var docok = Math.ceil((docloo));
     $('html').animate({scrollLeft:(docok*position)}, 600);
     event.preventDefault();
 }
@@ -107,8 +107,8 @@ $(window).load(function(){
 
 var sizingPage = function()
 {
-	var docWidth = document.outerWidth || document.documentElement.clientWidth;
-	var docHeight = document.outerHeight || document.documentElement.clientHeight;
+	var docWidth = document.innerWidth || document.documentElement.clientWidth;
+	var docHeight = document.innerHeight || document.documentElement.clientHeight;
 	console.log(docWidth + " - " + docHeight);
 	var marginWidth = Math.ceil((docWidth*0.2)/2);
 	var marginheight = Math.ceil((docHeight*0.2)/2);
@@ -117,7 +117,8 @@ var sizingPage = function()
 	};
 	var contentheight = Math.ceil((docHeight*0.79));
 	var contentwidth = Math.ceil((docWidth*0.79));
-	var contentheightdeux = Math.ceil((contentheight-60));
+	var contentheightdeux = Math.ceil((docHeight*0.68));
+	var margintop = Math.ceil((docHeight*0.06));
 	var long = Math.ceil((docWidth*8));
 	console.log(marginWidth + " - " + marginheight);
 	$('.acceuila').css("height", marginheight);
@@ -129,6 +130,8 @@ var sizingPage = function()
 	$('.resize').css("padding-left", marginWidth);
 	$('.resize').css("padding-right", marginWidth);
 	$('.page').css("width", docWidth);
+	$('.page').css("top", margintop);
+	$('.page').css("height", contentheightdeux + 'px');
 	$('.pagein').css("height", contentheightdeux + 'px');
 	$('.all').css("width", long);
 }

@@ -117,7 +117,7 @@ var sizingPage = function()
 	};
 	var contentheight = Math.ceil((docHeight*0.79));
 	var contentwidth = Math.ceil((docWidth*0.79));
-	var contentheightdeux = Math.ceil((docHeight*0.68));
+	var contentheightdeux = Math.ceil((docHeight*0.70));
 	var margintop = Math.ceil((docHeight*0.06));
 	var long = Math.ceil((docWidth*8));
 	console.log(marginWidth + " - " + marginheight);

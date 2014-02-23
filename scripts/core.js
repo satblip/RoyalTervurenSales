@@ -132,7 +132,6 @@ var sizingPage = function()
 	$('.resize').css("padding-right", marginWidth + 'px');
 	$('.page').css("width", docWidth + 'px');
 	$('.page').css("top", margintop + 'px');
-	$('.footer').css("height", 68 + 'px');
 	$('.page').css("height", contentheightdeux+2 + 'px');
 	$('.pagein').css("height", contentheightdeux + 'px');
 	$('.all').css("width", long + 'px');
@@ -149,7 +148,7 @@ var menubouge = function()
 	var docHeight = document.outerHeight || document.documentElement.clientHeight;
 	
 
-	var hauteurabouger = Math.ceil((docHeight-5-5-50));
+	var hauteurabouger = Math.ceil((docHeight-75));
 	$('#blocmenu').css('transform', 'translateY(-'+hauteurabouger+'px)')
 	console.log('tessst'+hauteurabouger);
 }
@@ -159,7 +158,7 @@ var menubouge2 = function()
 	var docHeight = document.outerHeight || document.documentElement.clientHeight;
 	
 
-	var hauteurabouger = Math.ceil((docHeight-5-5-50));
+	var hauteurabouger = Math.ceil((docHeight-75));
 
 	$('#blocmenu').css('transform', 'translateY(-'+hauteurabouger+'px)')
 	console.log('tessst'+hauteurabouger);

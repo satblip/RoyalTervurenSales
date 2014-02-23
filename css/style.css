@@ -12,6 +12,8 @@ noir = #010101
 
 */
 
+
+
 @font-face{
 font-family: cali;
 src: url('../font/cali.ttf'),
@@ -34,6 +36,8 @@ body {
 	padding: 0;
 	font: normal 90% thin 'beba' "Lucida Grande",Tahoma,Arial,Helvetica,Sans-Serif;
 	overflow: hidden;
+	width: 100%;
+	height: 100%;
 
 }
 
@@ -47,67 +51,7 @@ p {
 	padding-left: 20px;
 }
 
-/* Page Contact Box */
 
-.contactbox {
-	position: fixed;
-	bottom: 20px;
-	right: 0px;
-	z-index: 100;
-	height: 35px;
-	width: 600px;
-	background-color: #010101;
-	color: #fff;
-	font-size: 22px;
-
-}
-
-.divcont{
-	position: relative; ;
-	top: 8px ;
-	left: 8px;
-}
-
-.contactbouts {
-	position: relative;
-	top: 4px;
-}
-
-input[type=submit], input[type=reset] {
- width:50px;
- height: 25px;
- border-radius: 0;
- margin-left:5px;
- background-color: #010101;
- color: #fff;
- cursor:pointer;
- border: 1px solid #fff;
- margin-right: 6px;
- }
-
- input[type=text] {
- width:200px;
- height: 23px;
- border-radius: 0;
- margin-left:12px;
- background-color: #fff;
- color: #010101;
- cursor:pointer;
- border: 1px solid #333333;
- margin-right: 0px;
- }
-
- input, textarea {
- width:550px;
- height: 440px;
- border-radius: 0;
- margin-left:12px;
- background-color: #fff;
- color: #010101;
- cursor:pointer;
- border: 1px solid #333333;
- margin-right: 0px;
- }
 
 /* Page Acceuil */
 
@@ -123,6 +67,10 @@ input[type=submit], input[type=reset] {
 
 .linbloc{
 	display: inline-block;
+}
+
+.titreacceuil {
+	height: 20%;
 }
 
 .acceuila{
@@ -183,6 +131,19 @@ input[type=submit], input[type=reset] {
 	top: 0;
 }
 
+.header {
+	font-size: 38px;
+	text-align: center;
+	min-height: 60px;
+	margin: 0;
+}
+
+
+#header span {
+	cursor: pointer;
+
+}
+
 .menucentre {
 	position: relative;
 	top: 14px;
@@ -190,7 +151,7 @@ input[type=submit], input[type=reset] {
 
 #blocmenu {
 	z-index: 50;
-	height: 60px;
+	/*height: 60px;*/
 	width: 100%;
 	position: fixed;
 	bottom: 0;
@@ -216,22 +177,10 @@ input[type=submit], input[type=reset] {
 .lignenoir {
 	background-color: #010101;
 	width: 100%;
-	height: 3px;
+	height: 2px;
 
 }
 
-.header {
-	font-size: 38px;
-	text-align: center;
-	height: 60px;
-	margin: 0;
-}
-
-
-#header span {
-	cursor: pointer;
-
-}
 
 .lignebloc {
 	display: inline-block;
@@ -271,7 +220,7 @@ input[type=submit], input[type=reset] {
 
 .logopage {
 	width: 250px;
-	height: 100px;
+	height: 13%;
 	background-color: #010101;
 }
 
@@ -289,7 +238,7 @@ input[type=submit], input[type=reset] {
 	width: 80%;
 	position: relative;
 	left: 140px;
-	box-shadow: 5px 5px 0px rgba(1,1,1,0.8);
+	box-shadow: 5px 5px 4px rgba(1,1,1,0.8);
 }
 
 /* CSS Page Inside */
@@ -318,39 +267,49 @@ input[type=submit], input[type=reset] {
 	 
 }
 
+.expl{
+	float: left;
+	width: 35%;
+	max-height: 80%;
+	margin-left: 3%;
+	background: rgba(255,255,255,0.7);
+	position: relative;
+	top: 5%;
+	box-shadow: 5px 5px 4px rgba(1,1,1,0.8);
+	overflow: auto ;
+}
+
 .galleryinside {
+	
 	overflow: auto;
     float: right;
-    position: relative;
-    right: -80px;
-    margin-right:0;
-    padding-right: 0;
-    overflow: scroll !important;
-    background: transparent;
-	
+    width: 100%;   
+    overflow: hidden !important;
+    overflow-x: hidden !important;
+
 
 }
 
 .descr {
 	font-size: 15px;
 	font-family: Arial,sans-serif;
-	
+	background: rgba(255,255,255,0.7);
 	float: right;
-	width: 60%;
-	height: 97%;
-	margin: 0px 0px 0px 0px;
+	width: 55%;
+	height: 94%;
+	padding-top: 2%;
+	padding-bottom: 1.5%;
+	padding-left:4%;
+	position: relative;
+	top: -13%;
 	z-index: 5;
 	overflow-y: auto;
 	overflow-x: hidden !important;
-	background: transparent;
-	padding-bottom: 1%;
-	padding-top: 1%;
 
 }
 
-.gal1 {
-	position: relative;
-	top: 30px;
+.photos{
+	margin: auto;
 }
  
 
@@ -364,10 +323,6 @@ input[type=submit], input[type=reset] {
 	background-image-opacity:0.9; 
 }
 
-.galhaut{
-	position: relative;
-	top: -70px;
-}
 
 
 /* CSS DES SLIDES */
@@ -441,11 +396,144 @@ input[type=submit], input[type=reset] {
 	padding-right: 30px;
 }
 
+/* Footer */
+
 .footer {
-	height: 60px;
+	
 	width: 100%;
 	text-align: left;
 	font-size: 18px;
 	position: fixed;
 	bottom: 0;
+}
+
+.fl {
+	float: left;
+	/*width: 420px;*/
+}
+
+/* Contact Box */
+
+.contactbox {
+	
+	float: right;
+	
+	right: 0px;
+	z-index: 100;
+	min-height: 35px;
+	width: 600px;
+	background-color: #010101;
+	color: #fff;
+	font-size: 22px;
+
+}
+
+.divcont{
+	position: relative; ;
+	top: 8px ;
+	left: 8px;
+}
+
+.contactbouts {
+	position: relative;
+	top: 4px;
+}
+
+input[type=submit], input[type=reset] {
+ width:50px;
+ height: 25px;
+ border-radius: 0;
+ margin-left:5px;
+ background-color: #010101;
+ color: #fff;
+ cursor:pointer;
+ border: 1px solid #fff;
+ margin-right: 6px;
+ }
+
+ input[type=text] {
+ width:200px;
+ height: 23px;
+ border-radius: 0;
+ margin-left:12px;
+ background-color: #fff;
+ color: #010101;
+ cursor:pointer;
+ border: 1px solid #333333;
+ margin-right: 0px;
+ }
+
+ input, textarea {
+ width:550px;
+ height: 440px;
+ border-radius: 0;
+ margin-left:12px;
+ background-color: #fff;
+ color: #010101;
+ cursor:pointer;
+ border: 1px solid #333333;
+ margin-right: 0px;
+ }
+
+ /*------------------------
+
+		MEDIA QUERIES 
+
+------------------------*/
+
+@media screen and (max-width: 1023px) {
+	.divcont {
+		text-align: center;
+		
+
+	}
+
+	.fl{
+		float: none;
+		background: #fff;
+		
+	}
+
+	.expl {
+		width: 90%;
+		padding-left: 5% !important;
+		max-height: 35%;
+		float: none;
+	}
+
+	.descr {
+		width: 90%;
+		height: 35%;
+		padding-top: 5px;
+		padding-left: 5% !important;
+		margin-left: 3% !important;
+		float: none;
+		position: relative;
+		top: 60px;
+		box-shadow: 5px 5px 4px rgba(1,1,1,0.8);
+	}
+
+	.galhaut{
+		position: relative;
+		right: 00px;
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+}
+
+
+
+	.contactbox {
+		width: 100%;
+		float: none;
+		font-size: 28px;
+		background: #010101;
+		padding-bottom: 3px;
+	}
+
+	.footer {
+		text-align: center;
+		
+		
+	}
 }

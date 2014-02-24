@@ -26,6 +26,12 @@ src: url('../font/corp.ttf');
 font-family: eleg;
 src: url('../font/Elegantlight.ttf');
 
+}
+
+@font-face{
+font-family: 'Ambassador Script';
+src: url('../font/ambassador_script.ttf');
+
 } 
 
 
@@ -40,9 +46,9 @@ src: url('../font/Elegantlight.ttf');
 			top: 10px !important;
 		}
 
-		.header {
+/*		.header {
 			font-size: 30px !important;
-		}
+		}*/
 
 		.fl {
 			float: none;
@@ -54,7 +60,7 @@ src: url('../font/Elegantlight.ttf');
 			margin: auto;
 			float: none;
 			width: 100% !important;
-			font-size: 1.5em !important;
+			/*font-size: 1.5em !important;*/
 		}
 
 		.expl{
@@ -93,19 +99,15 @@ src: url('../font/Elegantlight.ttf');
 
 												/* CORE PAGE */
 html {
-	font-size: 16px;
+	/*font-size: 16px;*/
 }
 
 body {
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	font-size: 62,5%;
+	/*font-size: 62,5%;*/
 
-}
-
-h1 {
-	font-weight: normal;
 }
 
 iframe {
@@ -145,7 +147,7 @@ span {
 	border: 1px solid #333333;
 	/*text-transform: uppercase;*/
 	text-decoration: none;
-	font-size: 20px;
+	/*font-size: 20px;*/
 }
 
 
@@ -162,7 +164,7 @@ span {
 
 .menucentre {
 	position: relative;
-	top: 5px;
+	top: 3vh;
 }
 
 .menutop {
@@ -172,17 +174,35 @@ span {
 }
 
 .header {
-	font-size: 38px;
 	text-align: center;
 	margin: 0;
-	min-height: 60px;
-	
+	height: 10vh;	
+}
 
+h1{
+	padding:0;
+	margin:0;
+	font-size: 6vw;
+	font-weight: normal;
+}
+
+h2{
+	margin:0;
+	font-size: 3vw;
+	font-weight: normal;
+	display: inline-block;
+}
+
+h3{
+	margin:0;
+	font-size: 2vw;
+	font-weight: normal;
+	display: inline-block;
 }
 
 #header span {
 	cursor: pointer;
-	font-family: 'Ambassador';
+	font-family: beba;
 	font-weight: 400 !important;
 
 
@@ -245,7 +265,7 @@ span {
 	top: 5px;
 	color: #fff;
 	font-family: 'Ambassador Script';
-	font-size: 1.8em;
+	padding: 2vw;
 }
 
 #pageacceuil{
@@ -316,7 +336,7 @@ span {
 	top: 5%;
 	box-shadow: 5px 5px 4px rgba(1,1,1,0.7);
 	overflow: auto ;
-	font-family: 'Ambassador';
+	font-family: beba;
 }
 
 .galleryinside {
@@ -364,29 +384,33 @@ span {
 												/* FOOTER */
 
 .footer {
-	
 	width: 100%;
-	text-align: left;
-	font-size: 18px;
 	position: fixed;
 	bottom: 0;
 }
 
 .fl {
-	float: left;
-	font-family: 'Ambassador';
+	display: inline-block;
+	float:left;
 	position: relative;
 	top: -10px;
 
+
 	/*width: 420px;*/
+}
+.fl p {
+	margin-left: auto;
+	margin-right: auto;
+	width: 20em;
+	font-family: beba;
 }
 
 												/* Contact Box */
 
 .contactbox {
-	
-	float: right;
-	font-family: 'Ambassador';
+	display: inline-block;
+	float:right;
+	font-family: beba;
 	font-weight: bold;
 	right: 0px;
 	z-index: 100;
@@ -400,8 +424,8 @@ span {
 
 .divcont{
 	position: relative;
-	top: 8px ;
-	left: 8px;
+	top: 0.6vw;
+	left: 0.6vw;
 }
 
 .contactbouts {

@@ -69,7 +69,7 @@ var sizingPage = function(){
 }
 
 
-function horizontalNavigation(position, event) {
+function horizontalNavigation(position) {
 	var docloo = totalWidth;
 	var docok = Math.ceil((docloo));
 	reccordPosition = position;
@@ -78,11 +78,9 @@ function horizontalNavigation(position, event) {
 	}else{
 		$('html,body').animate({scrollLeft:(docok*position)}, 600);
 	}
-    
-    event.preventDefault();
 }
 
-function direstHorizontalNavigation(position, event) {
+function direstHorizontalNavigation(position) {
 	var docloo = totalWidth;
 	var docok = Math.ceil((docloo));
 	
@@ -100,28 +98,27 @@ function direstHorizontalNavigation(position, event) {
 ---------------------------------------*/
 
 $('#link_home').click(function(){
-	
-	horizontalNavigation(0, event);
+	horizontalNavigation(0);
 });
 $('#link0').click(function(){
 	
-	horizontalNavigation(1, event);
+	horizontalNavigation(1);
 });
 $('#link1').click(function(){
 	
-	horizontalNavigation(2, event);
+	horizontalNavigation(2);
 });
 $('#link2').click(function(){
-	horizontalNavigation(3, event);
+	horizontalNavigation(3);
 });
 $('#link3').click(function(){
-	horizontalNavigation(4, event);
+	horizontalNavigation(4);
 });
 $('#link4').click(function(){
-	horizontalNavigation(5, event);
+	horizontalNavigation(5);
 });
 $('#link5').click(function(){
-	horizontalNavigation(6, event);
+	horizontalNavigation(6);
 });
 
 
@@ -252,48 +249,14 @@ $('#directemail').on('focus', function(){
 
 // /*--------------------------------------
 
-<<<<<<< HEAD
-// 			Visite 3d
 
-// ---------------------------------------*/
+		$(function() {
 
+			causeRepaintsOn = $("div, h1, h2, h3, p");
 
-=======
-// 			SCROLL FANCYBOX IPAD
+			$(window).resize(function() {
+				causeRepaintsOn.css("z-index", 1);
+			});
 
-// ---------------------------------------*/
+		});
 
-// $(function(){
-// 	    $('.fancybox').fancybox({
-// 		    padding : 0,
-// 		    arrows: false,
-// 		    helpers : {
-//                 thumbs : {
-// 				    width  : 150,
-// 				    height : 50
-// 			    }
-// 		    },
-// 		    onUpdate:function(){
-// 			    $('#fancybox-thumbs ul').draggable({
-// 				    axis: "x"
-// 			    });
-// 			    var posXY = '';
-// 			    $('.fancybox-skin').draggable({
-// 				    axis: "x",
-// 				    drag: function(event,ui){
-// 					    // get position
-//                         posXY = ui.position.left;
-//                         // if drag distance bigger than +- 100px: cancel drag function..
-//                         if(posXY > 100){return false;}
-// 					    if(posXY < -100){return false;}
-// 				    },
-// 				    stop: function(){
-//                         // ... and get next oder previous image
-// 					    if(posXY > 95){$.fancybox.prev();}
-// 					    if(posXY < -95){$.fancybox.next();}
-// 				    }
-// 			    });
-// 		    }
-// 		    });
-// })
->>>>>>> master

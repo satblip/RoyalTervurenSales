@@ -1,120 +1,291 @@
-$(document).ready(function(){   
-// $('#slide_home').parallax("center", 0, 0.1, true);
-// $('#slide0').parallax("center", 650, 0.1, true);
-// $('#slide1').parallax("center", 1300, 0.1, true);
+/*--------------------------------------
+
+			CREATED AND DESIGNED 
+					BY
+		Louis Borsu & Philes Gilles
+			Satprod Engineering
+
+---------------------------------------*/
+$( document ).ready(function() {
 
 
 
+/*--------------------------------------
 
+			VARIABLES
 
-/* ---------- Resize Regarding Browser Height ---------- */
-/* Functions */
-var slideSizing = function(browser_height){
-	$('#slide_home, #slide0, #slide1, #slide2, #slide3, #slide4, #slide5').css("height",browser_height-120)
+---------------------------------------*/
+
+var menuHeight = $("#blocmenu").height();
+var footerHeight = $(".footer").height();
+var titreHeight = $('#titreacceuil').height();
+var totalWidth =  window.innerWidth;
+var totalHeight = window.innerHeight;
+var pageinHeight = 1 ;
+var passeLR;
+var reccordPosition;
+
+/*--------------------------------------
+
+			FONCTIONS
+
+---------------------------------------*/
+
+var sizingPage = function(){
+	
+
+	var acceuilHeight = totalHeight-menuHeight;
+	var pageaccinHeight = Math.ceil(((totalHeight-menuHeight)-titreHeight)*0.8);
+	var pageaccHeight = Math.ceil(((totalHeight-menuHeight)-titreHeight));
+	var pageinHeight = Math.ceil(((totalHeight-menuHeight)-footerHeight)*0.8);
+	var paddingPageacc = Math.ceil(((totalHeight-menuHeight)-titreHeight)*0.1);
+	var paddingPage = Math.ceil(((totalHeight-menuHeight)-footerHeight)*0.1);
+	var paddinglr = Math.ceil(totalWidth*0.1) ;
+	passeLR = paddinglr;
+	var all = Math.ceil((totalWidth*6)+6*10);
+	var pageWidth = Math.ceil(totalWidth*0.8) ;
+	var pageHeight = Math.ceil((totalHeight-menuHeight)-footerHeight) ;
+	var pageinWidth = Math.ceil(pageWidth);
+
+	$('#pageacceuil').css('padding-bottom', menuHeight + 'px');
+	$('#pageacceuil').css('height', acceuilHeight + 'px');
+
+	$('.pageaccin').css('height', pageaccinHeight + 'px');
+	$('.pageacc').css('height', paddingPageacc + 'px');
+	$('.pageacc').css('padding', paddingPageacc + 'px');
+	$('.all').css('width', all +'px');
+	$('.page').css('padding-top', paddingPage + 'px');
+	$('.page').css('padding-bottom', paddingPage + 'px');
+	$('.page').css('padding-left', paddinglr + 'px');
+	$('.page').css('padding-right', paddinglr + 'px');
+	$('.page').css('width', pageWidth + 'px');
+	$('.page').css('height', pageHeight + 'px');
+	$('.page').css('margin-top', menuHeight + 'px');
+	$('.pagein').css('height', pageinHeight + 'px');
+	$('.pagein').css('Width', pageinWidth + 'px');
+
+	// $('.pagein').append(paddingPage+ "pad " +paddinglr+ "padlr " +all+ "all " +pageWidth+ "w " +pageinWidth + 'inw ');
+	
 }
-var getBrowserHeight = function(){
-	browser_height = $(window).height();
-	if (browser_height < 650){
-		browser_height = 650;
+
+
+function horizontalNavigation(position, event) {
+	var docloo = totalWidth;
+	var docok = Math.ceil((docloo));
+	reccordPosition = position;
+	if(position != 0){
+		$('html,body').animate({scrollLeft:((docok+5)*position)}, 600);
+	}else{
+		$('html,body').animate({scrollLeft:(docok*position)}, 600);
 	}
-	return browser_height;
+    
+    event.preventDefault();
 }
 
-/* Browser Triggers */
-$(window).resize(function(){
-	browser_height = getBrowserHeight();
-	slideSizing(browser_height);
-});
-$(window).load(function(){
-	browser_height = getBrowserHeight();
-	slideSizing(browser_height);
-});
-/* ---------- EO Resize Regarding Browser Height ---------- */
-
-
-
-
-
- // ---------- Menu to Anchors ---------- 
-/* Function */
-function scrollToAnchor(aid){
-	var aTag = $("a[name='"+ aid +"']");
-    $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+function direstHorizontalNavigation(position, event) {
+	var docloo = totalWidth;
+	var docok = Math.ceil((docloo));
+	
+	if(position != 0){
+		$('html,body').animate({scrollLeft:((docok+5)*position)},0);
+	}else{
+		$('html,body').animate({scrollLeft:(docok*position)},0);
+	}
 }
 
-$( "#blocmenu" ).click(function() {
-  $( "#pageacceuil" ).slideUp('slow');
-  $('#enterwebsite').hide('slow');
-  $('#header').show('slow');
-  setTimeout(function() {
-  	$('#blocmenu').css('position', 'fixed');
-  	$('#blocmenu').css('top', '0');
-  	$('#wrap').show('slow');
-  	
-  	$('.footer').show();
-  }, 600);
+/*--------------------------------------
 
-});
+			Trigger
 
-/* Link triggers */
+---------------------------------------*/
+
 $('#link_home').click(function(){
-	scrollToAnchor("Home");
+	
+	horizontalNavigation(0, event);
 });
 $('#link0').click(function(){
-	scrollToAnchor("Spirit")
+	
+	horizontalNavigation(1, event);
 });
 $('#link1').click(function(){
-	scrollToAnchor("Events")
+	
+	horizontalNavigation(2, event);
 });
 $('#link2').click(function(){
-	scrollToAnchor("Studio")
+	horizontalNavigation(3, event);
 });
 $('#link3').click(function(){
-	scrollToAnchor("Engineering")
+	horizontalNavigation(4, event);
 });
 $('#link4').click(function(){
-	scrollToAnchor("Team")
+	horizontalNavigation(5, event);
 });
 $('#link5').click(function(){
-	scrollToAnchor("Contact")
-});
-/* ---------- EO Menu to Anchors ---------- */
-
-
-
-/* ---------- EO Resize et Sizing de la page ---------- */
-
-});
-
-/* ---------- Resize et Sizing de la page ---------- */
-$(window).resize(function(){
-	sizingPage();
-});
-
-$(window).load(function(){
-	sizingPage();
+	horizontalNavigation(6, event);
 });
 
 
-var sizingPage = function()
-{
-	var docWidth = document.outerWidth || document.documentElement.clientWidth;
-	var docHeight = document.outerHeight || document.documentElement.clientHeight;
-	console.log(docWidth + " - " + docHeight);
-	var marginWidth = Math.ceil((docWidth*0.2)/2);
-	var marginheight = Math.ceil((docHeight*0.2)/2);
-	if (marginheight < 60){
-		marginheight = 60;
-	};
-	var contentheight = Math.ceil((docHeight*0.79));
-	var contentwidth = Math.ceil((docWidth*0.79));
-	console.log(marginWidth + " - " + marginheight);
-	$('.acceuila').css("height", marginheight);
-	$('.acceuilb').css("height", marginheight);
-	$('.acceuilstuff').css("height", contentheight-60);
-	$('.acceuilstuff').css("width", contentwidth);
-	$('.acca').css("width", marginWidth);
-	$('.accb').css("width", marginWidth);
-	$('.resize').css("padding-left", marginWidth);
-	$('.resize').css("padding-right", marginWidth);
+
+/*--------------------------------------
+
+			ON RESIZE
+
+---------------------------------------*/
+var resizeAll = function(){
+	setTimeout(function() {
+	    menuHeight = $("#blocmenu").height();
+		footerHeight = $(".footer").height();
+		titreHeight = $('#titreacceuil').height();
+		totalWidth =  window.innerWidth;
+		totalHeight = window.innerHeight;
+		pageinHeight = 1 ;
+		direstHorizontalNavigation(reccordPosition);
+		sizingPage();
+	}, 100);
 }
+
+window.onresize = function() {
+	resizeAll();
+};
+
+$('#directemail').on('blur', function(){
+	resizeAll();
+})
+
+$('#directemail').on('focus', function(){
+	resizeAll();
+})
+
+/*--------------------------------------
+
+			DOCUMENT READY
+
+---------------------------------------*/
+
+	sizingPage();
+    $("#blocmenu").click(function() {
+		$(this).addClass('menutop');
+		$('#lignemenuhaut').hide();
+		$('#pageacceuil').fadeOut(200);
+		$( ".noir" ).removeClass( "noir" ).addClass( "blanc textenoir" );
+		  setTimeout(function() {
+		  	$('.footer').show();
+		  	$('.all').show();
+		  }, 400);
+
+
+
+	});
+
+
+});
+
+
+
+// $( "#blocmenu" ).click(function() {
+// 	$('#blocmenu').addClass('menutop');
+// });
+
+
+/*--------------------------------------
+
+			NO ZOOM IPAD
+
+---------------------------------------*/
+
+/*! A fix for the iOS orientationchange zoom bug.
+ Script by @scottjehl, rebound by @wilto.
+ MIT / GPLv2 License.
+*/
+(function(w){
+	
+	// This fix addresses an iOS bug, so return early if the UA claims it's something else.
+	var ua = navigator.userAgent;
+	if( !( /iPhone|iPad|iPod/.test( navigator.platform ) && /OS [1-5]_[0-9_]* like Mac OS X/i.test(ua) && ua.indexOf( "AppleWebKit" ) > -1 ) ){
+		return;
+	}
+
+    var doc = w.document;
+
+    if( !doc.querySelector ){ return; }
+
+    var meta = doc.querySelector( "meta[name=viewport]" ),
+        initialContent = meta && meta.getAttribute( "content" ),
+        disabledZoom = initialContent + ",maximum-scale=1",
+        enabledZoom = initialContent + ",maximum-scale=10",
+        enabled = true,
+		x, y, z, aig;
+
+    if( !meta ){ return; }
+
+    function restoreZoom(){
+        meta.setAttribute( "content", enabledZoom );
+        enabled = true;
+    }
+
+    function disableZoom(){
+        meta.setAttribute( "content", disabledZoom );
+        enabled = false;
+    }
+	
+    function checkTilt( e ){
+		aig = e.accelerationIncludingGravity;
+		x = Math.abs( aig.x );
+		y = Math.abs( aig.y );
+		z = Math.abs( aig.z );
+				
+		// If portrait orientation and in one of the danger zones
+        if( (!w.orientation || w.orientation === 180) && ( x > 7 || ( ( z > 6 && y < 8 || z < 8 && y > 6 ) && x > 5 ) ) ){
+			if( enabled ){
+				disableZoom();
+			}        	
+        }
+		else if( !enabled ){
+			restoreZoom();
+        }
+    }
+	
+	w.addEventListener( "orientationchange", restoreZoom, false );
+	w.addEventListener( "devicemotion", checkTilt, false );
+
+})( this );
+
+// /*--------------------------------------
+
+// 			SCROLL FANCYBOX IPAD
+
+// ---------------------------------------*/
+
+// $(function(){
+// 	    $('.fancybox').fancybox({
+// 		    padding : 0,
+// 		    arrows: false,
+// 		    helpers : {
+//                 thumbs : {
+// 				    width  : 150,
+// 				    height : 50
+// 			    }
+// 		    },
+// 		    onUpdate:function(){
+// 			    $('#fancybox-thumbs ul').draggable({
+// 				    axis: "x"
+// 			    });
+// 			    var posXY = '';
+// 			    $('.fancybox-skin').draggable({
+// 				    axis: "x",
+// 				    drag: function(event,ui){
+// 					    // get position
+//                         posXY = ui.position.left;
+//                         // if drag distance bigger than +- 100px: cancel drag function..
+//                         if(posXY > 100){return false;}
+// 					    if(posXY < -100){return false;}
+// 				    },
+// 				    stop: function(){
+//                         // ... and get next oder previous image
+// 					    if(posXY > 95){$.fancybox.prev();}
+// 					    if(posXY < -95){$.fancybox.next();}
+// 				    }
+// 			    });
+// 		    }
+// 		    });
+// })

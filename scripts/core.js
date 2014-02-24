@@ -252,8 +252,48 @@ $('#directemail').on('focus', function(){
 
 // /*--------------------------------------
 
+<<<<<<< HEAD
 // 			Visite 3d
 
 // ---------------------------------------*/
 
 
+=======
+// 			SCROLL FANCYBOX IPAD
+
+// ---------------------------------------*/
+
+// $(function(){
+// 	    $('.fancybox').fancybox({
+// 		    padding : 0,
+// 		    arrows: false,
+// 		    helpers : {
+//                 thumbs : {
+// 				    width  : 150,
+// 				    height : 50
+// 			    }
+// 		    },
+// 		    onUpdate:function(){
+// 			    $('#fancybox-thumbs ul').draggable({
+// 				    axis: "x"
+// 			    });
+// 			    var posXY = '';
+// 			    $('.fancybox-skin').draggable({
+// 				    axis: "x",
+// 				    drag: function(event,ui){
+// 					    // get position
+//                         posXY = ui.position.left;
+//                         // if drag distance bigger than +- 100px: cancel drag function..
+//                         if(posXY > 100){return false;}
+// 					    if(posXY < -100){return false;}
+// 				    },
+// 				    stop: function(){
+//                         // ... and get next oder previous image
+// 					    if(posXY > 95){$.fancybox.prev();}
+// 					    if(posXY < -95){$.fancybox.next();}
+// 				    }
+// 			    });
+// 		    }
+// 		    });
+// })
+>>>>>>> master

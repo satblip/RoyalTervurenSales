@@ -69,7 +69,7 @@ var sizingPage = function(){
 }
 
 
-function horizontalNavigation(position) {
+function horizontalNavigation(position, event) {
 	var docloo = totalWidth;
 	var docok = Math.ceil((docloo));
 	reccordPosition = position;
@@ -78,6 +78,8 @@ function horizontalNavigation(position) {
 	}else{
 		$('html,body').animate({scrollLeft:(docok*position)}, 600);
 	}
+    
+    ;
 }
 
 function direstHorizontalNavigation(position) {
@@ -88,7 +90,7 @@ function direstHorizontalNavigation(position) {
 		$('html,body').animate({scrollLeft:((docok+5)*position)},0);
 	}else{
 		$('html,body').animate({scrollLeft:(docok*position)},0);
-	}
+	};
 }
 
 /*--------------------------------------
@@ -98,6 +100,7 @@ function direstHorizontalNavigation(position) {
 ---------------------------------------*/
 
 $('#link_home').click(function(){
+	
 	horizontalNavigation(0);
 });
 $('#link0').click(function(){
@@ -249,14 +252,8 @@ $('#directemail').on('focus', function(){
 
 // /*--------------------------------------
 
+// 			Visite 3d
 
-		$(function() {
+// ---------------------------------------*/
 
-			causeRepaintsOn = $("div, h1, h2, h3, p");
-
-			$(window).resize(function() {
-				causeRepaintsOn.css("z-index", 1);
-			});
-
-		});
 

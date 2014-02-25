@@ -7,18 +7,16 @@
 										|										|
 										---------------------------------------*/
 
-@import url(http://fonts.googleapis.com/css?family=Meddon);
-
-												/* Font Face */
 
 @font-face{
 font-family: cali;
-src: url('../font/cali.ttf'),
+src: url('../font/caligrap.ttf');
 } 
 
 @font-face{
 font-family: beba;
-src: url('../font/corp.ttf');
+src: url('../font/Bloemberg.ttf');
+src: url('../font/Bloemberg.otf');
 
 } 
 
@@ -26,94 +24,55 @@ src: url('../font/corp.ttf');
 font-family: eleg;
 src: url('../font/Elegantlight.ttf');
 
-}
-
-@font-face{
-font-family: 'Ambassador Script';
-src: url('../font/ambassador_script.ttf');
-
 } 
-
-
-												/* Media Queries */
-
-@media only screen  and (max-device-width : 1024px) {
-		.menutop {
-			
-		}
-
-		.menucentre {
-			top: 10px !important;
-		}
-
-/*		.header {
-			font-size: 30px !important;
-		}*/
-
-		.fl {
-			float: none;
-			width: 100%;
-			text-align: center;
-		}
-
-		.contactbox{
-			margin: auto;
-			float: none;
-			width: 100% !important;
-			/*font-size: 1.5em !important;*/
-		}
-
-		.expl{
-			
-			width: 57% !important;
-			
-		}
-
-		.galleryinside {
-			
-		    width: 40% !important;
-		    position: relative;
-		    right: 1%;
-
-		}
-}
-
-@media only screen  and (orientation : portrait) {
-				.expl{
-			
-			width: 65% !important;
-			
-		}
-
-		.galleryinside {
-			
-		    width: 32% !important;
-		    position: relative;
-		    right: 2.5%;
-
-		}
-}
 
 
 
 
 												/* CORE PAGE */
 html {
-	/*font-size: 16px;*/
+	font-size: 16px;
 }
 
 body {
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	/*font-size: 62,5%;*/
+	font-size: 62,5%;
+	background: url(../images/text.png);
 
+}
+
+h2 {
+	font-family: beba;
+	margin: 0;
+	padding: 0;
+	font-size: 28px;
+	font-weight: normal !important;
+	margin: 0;
+	padding: 0;
+}
+
+h3 {
+	font-family: beba;
+	margin: 0;
+	padding: 0;
+	font-size: 35px;
+	font-weight: bold;
+}
+
+p {
+	font-family: beba;
+	margin: 0;
+	padding: 0;
+	font-size: 22px;
 }
 
 iframe {
 	width: 100%;
 	height: 100%;
 	border: 0;
+	display: inline-block;
 }
 
 
@@ -121,8 +80,18 @@ span {
 	font-weight: normal;
 }
 
+.tout {
+	background: rgba(255, 255, 255, 0.7);
+	position: absolute;
+	top: 0px;
+	width:600%;
+	height: 100%;
+	z-index: -1 !important;
+
+}
+
 .blanc {
-	background-color: rgb(255, 255, 255);
+	background-color: transparent;
 }
 
 .noir {
@@ -138,7 +107,7 @@ span {
 	overflow: none;
 	-webkit-overflow-scrolling : none;
 	float: left;
-	font-family: Ambassador;
+	font-family: beba;
 
 }
 
@@ -147,7 +116,7 @@ span {
 	border: 1px solid #333333;
 	/*text-transform: uppercase;*/
 	text-decoration: none;
-	/*font-size: 20px;*/
+	font-size: 20px;
 }
 
 
@@ -164,7 +133,8 @@ span {
 
 .menucentre {
 	position: relative;
-	top: 3vh;
+	top: 12px;
+	font-size: 18px;
 }
 
 .menutop {
@@ -174,36 +144,19 @@ span {
 }
 
 .header {
+	font-size: 38px;
 	text-align: center;
 	margin: 0;
-	height: 10vh;	
+	min-height: 60px;
+	
 }
 
-h1{
-	padding:0;
-	margin:0;
-	font-size: 6vw;
-	font-weight: normal;
-}
-
-h2{
-	margin:0;
-	font-size: 3vw;
-	font-weight: normal;
-	display: inline-block;
-}
-
-h3{
-	margin:0;
-	font-size: 2vw;
-	font-weight: normal;
-	display: inline-block;
-}
 
 #header span {
 	cursor: pointer;
-	font-family: beba;
-	font-weight: 400 !important;
+	font-family: beba !important;
+	font-size: 35px;
+	font-weight: normal !important;
 
 
 }
@@ -232,17 +185,15 @@ h3{
 }
 
 .interligne {
-	background-color: #ffffff;
+	background-color:transparent;
 	width: 100%;
 	height: 10px;
-
 }
 
 .lignenoir {
 	background-color: #010101 !important;
 	width: 100%;
 	height: 2px;
-
 
 }
 
@@ -251,6 +202,11 @@ h3{
 												/* PAGE ACCEUIL */
 
 
+.acceuil {
+	background-image:url('../images/immeuble/20130527_RES_BBRA_PDK-3-M.jpg');
+	background-size:100% 100%;
+	background-image-opacity:0.9;
+}
 
 .pageaccin {
 	width: auto;
@@ -260,22 +216,34 @@ h3{
 	font-size: 20px;
 }
 
-.titre{
-	position: relative;
-	top: 5px;
-	color: #fff;
-	font-family: 'Ambassador Script';
-	padding: 2vw;
+.tit {
+	font-weight: normal;
+	font-family: cali !important;
+	padding: 8px !important;
+	font-size: 60px;
+	background-color: #010101;
 }
 
+
+.titre{
+	position: relative;
+	top: 15px;
+	color: #fff;
+
+}
+
+#titreacceuil {
+	background: rgb(1,1,1) !important;
+	height: 90px;
+}
+ 
 #pageacceuil{
-	background-color: rgb(255,255,255);
+	background-color: transparent;
 }
 
 .dessous {
 	z-index: 1 !important;
 }
-
 
 .linbloc{
 	display: inline-block;
@@ -284,8 +252,9 @@ h3{
 
 .acceuila{
 	margin: 0;
-	font-family: cali;
-	font-size: 40px;
+	height: 90px;
+	/*font-family: cali;
+	font-size: 40px;*/
 	text-align: center;
 	background-color: rgb(1,1,1);
 }
@@ -306,11 +275,10 @@ h3{
 .top {
 	position: relative;
 	top:0;
-
 }
 
 .descript {
-	background-image:url('../images/immeuble/20130527_RES_BBRA_PDK-3-M.jpg');
+	background-image:url('../images/immeuble/20130527_RES_BBRA_PDK-53-M.jpg');
 	background-size:100% 100%;
 	background-image-opacity:0.8; 
 }
@@ -336,7 +304,7 @@ h3{
 	top: 5%;
 	box-shadow: 5px 5px 4px rgba(1,1,1,0.7);
 	overflow: auto ;
-	font-family: beba;
+	font-family: 'Ambassador';
 }
 
 .galleryinside {
@@ -371,7 +339,6 @@ h3{
 }
 
 
-
 												/* TOUR */
 
 
@@ -384,33 +351,29 @@ h3{
 												/* FOOTER */
 
 .footer {
+	
 	width: 100%;
+	text-align: left;
+	font-size: 18px;
 	position: fixed;
 	bottom: 0;
 }
 
 .fl {
-	display: inline-block;
-	float:left;
+	float: left;
+	font-family: 'Ambassador';
 	position: relative;
-	top: -10px;
-
-
+	top: 3px;
+	text-align: center;
 	/*width: 420px;*/
-}
-.fl p {
-	margin-left: auto;
-	margin-right: auto;
-	width: 20em;
-	font-family: beba;
 }
 
 												/* Contact Box */
 
 .contactbox {
-	display: inline-block;
-	float:right;
-	font-family: beba;
+	
+	float: right;
+	font-family: 'Ambassador';
 	font-weight: bold;
 	right: 0px;
 	z-index: 100;
@@ -424,13 +387,13 @@ h3{
 
 .divcont{
 	position: relative;
-	top: 0.6vw;
-	left: 0.6vw;
+	top: 4px ;
+	left: 8px;
 }
 
 .contactbouts {
 	position: relative;
-	top: 4px;
+	top: 0px;
 }
 
 input[type=submit], input[type=reset] {
@@ -469,3 +432,71 @@ input[type=submit], input[type=reset] {
  border: 1px solid #333333;
  margin-right: 0px;
  }
+
+
+
+												/* Media Queries */
+
+@media only screen  and (max-device-width : 1024px) {
+		.menutop {
+			
+		}
+
+		.menucentre {
+			top: 10px !important;
+		}
+
+
+		.header {
+			position: relative;
+			top : 10px !important;
+		}
+		.header span {
+			font-size: 30px !important;
+		}
+
+		.fl {
+			float: none;
+			width: 100%;
+			text-align: center;
+		}
+
+		.contactbox{
+			margin: auto;
+			float: none;
+			width: 100% !important;
+			font-size: 1.5em !important;
+		}
+
+		.expl{
+			
+			width: 57% !important;
+
+		}
+
+		.galleryinside {
+			
+		    width: 40% !important;
+		    position: relative;
+		    right: 1%;
+
+		}
+
+	
+}
+
+@media only screen  and (orientation : portrait) {
+				.expl{
+			
+			width: 65% !important;
+			
+		}
+
+		.galleryinside {
+			
+		    width: 32% !important;
+		    position: relative;
+		    right: 2.5%;
+
+		}
+}

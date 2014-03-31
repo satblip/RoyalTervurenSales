@@ -130,6 +130,7 @@ li:hover{
 	-webkit-box-shadow: 0px 0px 2px #333333;
  	-moz-box-shadow: 0px 0px 2px #333333;
   	box-shadow: 0px 0px 2px #333333;
+  	display: none;
 }
 
 .colonegauche {
@@ -293,6 +294,7 @@ textarea {
  	position: absolute;
  	bottom: 2px;
  	left: 5px;
+ 	font-family: bebas;
  }
 
  .foota a {
@@ -305,6 +307,7 @@ textarea {
  	position: absolute;
  	bottom: 2px;
  	right: 5px;
+ 	font-family: bebas;
  }
 
  .footb a {

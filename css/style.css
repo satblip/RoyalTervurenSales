@@ -7,465 +7,308 @@
 										|										|
 										---------------------------------------*/
 
-@import url(http://fonts.googleapis.com/css?family=Meddon);
 
-												/* Font Face */
+/*Code couleur texte : 
+RGB: 103 115 122
 
-@font-face{
-font-family: cali;
-src: url('../font/cali.ttf'),
+Code couleur Logo : 
+RGB: 0 35 73*/
+ @font-face{
+font-family: bebas;
+src: url('../font/Bloemberg.ttf'),
+     url('../font/Bloemberg.eot'); /* IE9 */
 } 
-
-@font-face{
-font-family: beba;
-src: url('../font/corp.ttf');
-
+ @font-face{
+font-family: lulu;
+src: url('../font/lulu.ttf'),
 } 
-
-@font-face{
-font-family: eleg;
-src: url('../font/Elegantlight.ttf');
-
-}
-
-@font-face{
-font-family: 'Ambassador Script';
-src: url('../font/ambassador_script.ttf');
-
-} 
-
-
-												/* Media Queries */
-
-@media only screen  and (max-device-width : 1024px) {
-		.menutop {
-			
-		}
-
-		.menucentre {
-			top: 10px !important;
-		}
-
-/*		.header {
-			font-size: 30px !important;
-		}*/
-
-		.fl {
-			float: none;
-			width: 100%;
-			text-align: center;
-		}
-
-		.contactbox{
-			margin: auto;
-			float: none;
-			width: 100% !important;
-			/*font-size: 1.5em !important;*/
-		}
-
-		.expl{
-			
-			width: 57% !important;
-			
-		}
-
-		.galleryinside {
-			
-		    width: 40% !important;
-		    position: relative;
-		    right: 1%;
-
-		}
-}
-
-@media only screen  and (orientation : portrait) {
-				.expl{
-			
-			width: 65% !important;
-			
-		}
-
-		.galleryinside {
-			
-		    width: 32% !important;
-		    position: relative;
-		    right: 2.5%;
-
-		}
-}
-
-
-
-
-												/* CORE PAGE */
-html {
-	/*font-size: 16px;*/
-}
 
 body {
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
-	/*font-size: 62,5%;*/
+	background-color: rgb(255,255,255);
+	font-family: Arial,sans-serif;
+	font-size: 15px;
+	height: 100%;
+	width: 100%;
+	color: #515151;
+}
+
+
+
+.menu {
+	text-decoration: none;
+	display: block;
+	width: 700px;
+	position: relative;
+	left: 120px;
+	top:-8px;
+	margin: auto;
+	height: 15px;
+
+}
+
+
+ul {	
+	list-style: none;
+}
+
+li {
+	display: inline;
+	font-family: '',arial,serif;
+	color: rgb(103,115,122);
+	font-size: 15px;
+	padding-right: 15px;
+	line-height: 1.0;
+}
+
+
+.lang {
+	padding-right: 0px;
+	position: relative;
+	
+	right: -110px;
+	top:0px;
+	font-size: 11px;
+}
+
+.flaglang {
+	width: 15px;
+	height: 15px;
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+
+.flaglang:hover {
+	-webkit-filter: grayscale(30%);
+	-moz-filter: grayscale(30%);
+	filter: grayscale(30%);
+	transform:scale(1.2,1.2);
+	-ms-transform:scale(1.2,1.2); /* IE 9 */
+	-webkit-transform:scale(1.2,1.2);
+
+}
+
+.langactiv {
+	-webkit-filter: grayscale(0%) !important;
+	-moz-filter: grayscale(0%) !important;
+	filter: grayscale(0%) !important;
+	transform:scale(1.1,1.1);
+	-ms-transform:scale(1.1,1.1); /* IE 9 */
+	-webkit-transform:scale(1.1,1.1);
+}
+
+li:hover{
+	text-decoration: underline !important;
+	cursor: pointer;
+}
+
+.logo-menu {
+	background-color: rgb(00,35,73);
+	z-index: 7000;
+	position: absolute;
+	right: 0px;
+	top:-11px;
+	-webkit-box-shadow: 0px 0px 2px #333333;
+ 	-moz-box-shadow: 0px 0px 2px #333333;
+  	box-shadow: 0px 0px 2px #333333;
+
+}
+
+.logo1{
+	position: relative;
+	bottom:-10px;
+}
+
+.badge {
+	position: relative;
+	left: 690px;
+	top: -328px;
+	background-color: rgb(00,35,73);
+	z-index: 1000;
+	height: 125px;
+	width: 303px;
+	-webkit-box-shadow: 0px 0px 2px #333333;
+ 	-moz-box-shadow: 0px 0px 2px #333333;
+  	box-shadow: 0px 0px 2px #333333;
+}
+
+.colonegauche {
+	width: 270px;
+	position: absolute;
+	left: 
+}
+
+.textgauch {
+	position: relative;
+	left: 65px;
+	top: 150px;
+	max-width: 230px !important;
+	max-height: 300px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	font-family: arial;
+}
+
+.textgauch p {
+	word-wrap: break-word;
+}
+
+.all {
+	position:absolute; 
+	top:50%;
+	height:500px; 
+	margin-top:-280px;
+	left:50%;
+	width:980px;
+	margin-left:-490px;
+	display: inline-block;
+}
+
+.contenu {
+	-webkit-box-shadow: 0px 0px 5px #333333;
+ 	-moz-box-shadow: 0px 0px 5px #333333;
+  	box-shadow: 0px 0px 5px #333333;
+}
+
+#page1 {
+	height: 500px;
+	width: 980px;
+	margin: auto;
+
+}
+
+#page2 {
+	background-image:url('../img/fond.png');
+
+	height: 500px;
+	width: 980px;
+	margin: auto;
+}
+
+#page3 {
+	background-image:url('../img/fond.png');
+	height: 500px;
+	width: 980px;
+	margin: auto;
+}
+
+#page4 {
+	background-image:url('../img/fond.png');
+	width: 980px;
+	height: 500px;
+	margin: auto;
+}
+
+#page5 {
+	background-image:url('../img/fond.png');
+	height: 500px;
+	width: 980px;
+	margin: auto;
+}
+
+#page6 {
+	background-image:url('../img/fond.png');
+	height: 500px;
+	width: 980px;
+	margin: auto;
+}
+
+#page7 {
+	background-image:url('../img/fond.png');
+	height: 500px;
+	width: 980px;
+	margin: auto;
+}
+
+.descr {
+	font-size: 15px;
+	font-family: Arial,sans-serif;
+	float: right;
+	display: block;
+	width: 608px;
+	height: 330px;
+	margin: 100px 50px 0px 0px;
+	position: relative;
+	bottom: 0;
+	z-index: 5;
+	overflow: auto;
+	background: transparent;
 
 }
 
 iframe {
-	width: 100%;
-	height: 100%;
-	border: 0;
+	width: 608px;
+	height: 330px;
 }
 
 
-span {
-	font-weight: normal;
+.gal {
+	padding-left: 7px;
+	padding-top: 7px;
 }
 
-.blanc {
-	background-color: rgb(255, 255, 255);
-}
-
-.noir {
-	background-color: rgb(1, 1, 1) !important;	
-}
-
-.textenoir {
-	color: #010101;
-}
-
-.page{
-	margin: 0;
-	overflow: none;
-	-webkit-overflow-scrolling : none;
-	float: left;
-	font-family: Ambassador;
-
-}
-
-.pagein {
-	width: auto;
-	border: 1px solid #333333;
-	/*text-transform: uppercase;*/
-	text-decoration: none;
-	/*font-size: 20px;*/
-}
-
-
-												/* Animations */
-
-.transition {
-	transition: all linear 0.4s;
-	-moz-transition: all linear 0.4s;
-	-webkit-transition: all linear 0.4s;
-}
-
-
-												/* CSS Menu */
-
-.menucentre {
-	position: relative;
-	top: 3vh;
-}
-
-.menutop {
-	position: fixed;
-	bottom: 100% !important;
-	margin-bottom: -62px;
-}
-
-.header {
-	text-align: center;
-	margin: 0;
-	height: 10vh;	
-}
-
-h1{
-	padding:0;
-	margin:0;
-	font-size: 6vw;
-	font-weight: normal;
-}
-
-h2{
-	margin:0;
-	font-size: 3vw;
-	font-weight: normal;
-	display: inline-block;
-}
-
-h3{
-	margin:0;
-	font-size: 2vw;
-	font-weight: normal;
-	display: inline-block;
-}
-
-#header span {
-	cursor: pointer;
-	font-family: beba;
-	font-weight: 400 !important;
-
-
-}
-
-/*.menucentre {
-	position: relative;
-	top: 14px;
-}*/
-
-#blocmenu {
-	z-index: 50;
-	width: 100%;
-	position: fixed;
-	bottom: 0%;
-	text-transform: uppercase;
-	color: #fff;
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
-
-}
-
-.ligneblanche {
-	background-color: #ffffff;
-	width: 100%;
-	height: 2px;
-
-}
-
-.interligne {
-	background-color: #ffffff;
-	width: 100%;
-	height: 10px;
-
-}
-
-.lignenoir {
-	background-color: #010101 !important;
-	width: 100%;
-	height: 2px;
-
-
-}
-
-
-
-												/* PAGE ACCEUIL */
-
-
-
-.pageaccin {
-	width: auto;
-	border: 1px solid #333333;
-	/*text-transform: uppercase;*/
-	text-decoration: none;
-	font-size: 20px;
-}
-
-.titre{
-	position: relative;
-	top: 5px;
-	color: #fff;
-	font-family: 'Ambassador Script';
-	padding: 2vw;
-}
-
-#pageacceuil{
-	background-color: rgb(255,255,255);
-}
-
-.dessous {
-	z-index: 1 !important;
-}
-
-
-.linbloc{
-	display: inline-block;
-}
-
-
-.acceuila{
-	margin: 0;
-	font-family: cali;
-	font-size: 40px;
-	text-align: center;
-	background-color: rgb(1,1,1);
-}
-/*.acceuilb{
-	margin: 0;
-	position: relative;
-	top: -6.5%;
-}*/
-
-.except {
-	font-size: 22px;
-	text-align: center;
-	color: #010101;
-	z-index: 2
-}
-
-												/* DESCRIPTION */
-.top {
-	position: relative;
-	top:0;
-
-}
-
-.descript {
-	background-image:url('../images/immeuble/20130527_RES_BBRA_PDK-3-M.jpg');
-	background-size:100% 100%;
-	background-image-opacity:0.8; 
-}
-
-												/* INSIDE */
-.fancybox-skin{
-    cursor: e-resize;
-}
-
-.inside {
-	background-image:url('../images/immeuble/20130527_RES_BBRA_PDK-41-M.jpg');
-	background-size:100% 100%;
-	background-image-opacity:0.9;
-}
-
-.expl{
-	float: left;
-	width: 47%;
-	max-height: 90%;
-	margin-left: 3%;
-	background: rgba(255,255,255,0.9);
-	position: relative;
-	top: 5%;
-	box-shadow: 5px 5px 4px rgba(1,1,1,0.7);
-	overflow: auto ;
-	font-family: beba;
-}
-
-.galleryinside {
+.contact {
+	background: transparent;
 	float: right;
-    width: 50%;
-    height: 90%;
-    position: relative;
-    top: 5%;   
-    overflow-y: scroll !important;
-    -webkit-overflow-y-scrolling: touch;
-    overflow-x: hidden !important;
-
 
 }
 
-.photos{
-	margin-right: 12px;
-}
-
-.photos img {
-	float: right;
-	margin: 3px;
-}
-
-												/* DESIGN */
-
-
-.design {
-	background-image:url('../images/immeuble/20130527_RES_BBRA_PDK-30-M.jpg');
-	background-size:100% 100%;
-	background-image-opacity:0.9; 
-}
-
-
-
-												/* TOUR */
-
-
-												/* SERVICES */
-
-
-												/* CONTACT */
-
-
-												/* FOOTER */
-
-.footer {
-	width: 100%;
-	position: fixed;
-	bottom: 0;
-}
-
-.fl {
+input {
+	background: transparent;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Arial, sans-serif;
+	font-size: 12px;
+	float: left;
+	margin-bottom: 15px;
+	background: transparent;
+	border-style: solid;
+	border-width: 1px;
+	padding: 4px;
 	display: inline-block;
-	float:left;
+	width: 215px;
+}
+
+textarea {
+	height: 120px;
+	resize: none;
 	position: relative;
-	top: -10px;
-
-
-	/*width: 420px;*/
-}
-.fl p {
-	margin-left: auto;
-	margin-right: auto;
-	width: 20em;
-	font-family: beba;
+	left: -2px;
+	background: transparent; 
 }
 
-												/* Contact Box */
-
-.contactbox {
-	display: inline-block;
-	float:right;
-	font-family: beba;
-	font-weight: bold;
-	right: 0px;
-	z-index: 100;
-	min-height: 35px;
-	width: auto;
-	background-color: #010101;
-	color: #fff;
-	font-size: 1.5em;
-
-}
-
-.divcont{
-	position: relative;
-	top: 0.6vw;
-	left: 0.6vw;
-}
-
-.contactbouts {
-	position: relative;
-	top: 4px;
-}
-
-input[type=submit], input[type=reset] {
- width:50px;
- border-radius: 0;
- height: auto;
- margin-left:5px;
- background-color: #010101;
- color: #fff;
- cursor:pointer;
- border: 1px solid #fff;
- margin-right: 6px;
- -webkit-appearance: none;
+ label {
+ 	float: right;
+ 	position: relative;
+ 	display: block;
+ 	right: 35px;
+ 	top: 5px;
+ 	vertical-align: top;
  }
 
- input[type=text] {
- width:200px;
- height: auto;
- border-radius: 0;
- margin-left:12px;
- background-color: #fff;
- color: #010101;
- cursor:pointer;
- border: 1px solid #333333;
- margin-right: 0px;
+ .meil {
+ 	top:32px;
+ 	right: 38px;
  }
 
- input, textarea {
- width:550px;
- height: 440px;
- border-radius: 0;
- margin-left:12px;
- background-color: #fff;
- color: #010101;
- cursor:pointer;
- border: 1px solid #333333;
- margin-right: 0px;
+ .foota {
+ 	position: absolute;
+ 	bottom: 2px;
+ 	left: 5px;
+ }
+
+ .foota a {
+ 	text-decoration: none;
+ 	font-size: 15px;
+ 	color: rgb(103,115,122);
+ }
+
+  .footb {
+ 	position: absolute;
+ 	bottom: 2px;
+ 	right: 5px;
+ }
+
+ .footb a {
+ 	text-decoration: none;
+ 	font-size: 15px;
+ 	color: rgb(103,115,122);
  }

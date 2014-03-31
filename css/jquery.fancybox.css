@@ -231,7 +231,7 @@ a.fancybox-expand {
     text-shadow: none;
     z-index: 8050;
     display: block;
-    visibility: hidden;
+    visibility: hidden !important;
 }
 
 .fancybox-title-float-wrap {

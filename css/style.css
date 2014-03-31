@@ -250,21 +250,24 @@ iframe {
 
 .contact {
 	background: transparent;
-	float: right;
+	padding-left: 65px;
+}
 
+.contactform div{
+	display: block;
 }
 
 input {
+
 	background: transparent;
 	font-family: "Lucida Sans Unicode", "Lucida Grande", Arial, sans-serif;
 	font-size: 12px;
-	float: left;
 	margin-bottom: 15px;
 	background: transparent;
 	border-style: solid;
 	border-width: 1px;
 	padding: 4px;
-	display: inline-block;
+	display: block;
 	width: 215px;
 }
 
@@ -277,8 +280,6 @@ textarea {
 }
 
  label {
- 	float: right;
- 	position: relative;
  	display: block;
  	right: 35px;
  	top: 5px;

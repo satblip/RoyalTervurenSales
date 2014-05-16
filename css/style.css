@@ -316,3 +316,12 @@ textarea {
  	font-size: 15px;
  	color: rgb(103,115,122);
  }
+
+ .brand {
+	position:absolute; 
+	bottom:0%;
+	left:50%;
+	width:600px;
+	margin-left:-274px;
+	display: inline-block;
+}

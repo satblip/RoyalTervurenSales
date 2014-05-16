@@ -325,3 +325,7 @@ textarea {
 	margin-left:-274px;
 	display: inline-block;
 }
+
+.brand img {
+	opacity: 0.5;
+}

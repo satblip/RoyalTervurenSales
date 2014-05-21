@@ -141,8 +141,8 @@ li:hover{
 
 .textgauch {
 	position: relative;
-	left: 65px;
-	top: 150px;
+	left: 70px;
+	top: 110px;
 	max-width: 230px !important;
 	max-height: 300px;
 	overflow-y: auto;

@@ -319,13 +319,58 @@ textarea {
 
  .brand {
 	position:absolute; 
-	bottom:0%;
+	bottom:-10px;
 	left:50%;
-	width:600px;
-	margin-left:-274px;
+	width:1000px;
+	margin-left:-470px;
 	display: inline-block;
+	-webkit-transform: scale(0.6);
+    -moz-transform: scale(0.6);
+    -o-transform: scale(0.6);
+    transform: scale(0.6);
+    opacity: 0.5;
 }
 
 .brand img {
+	padding-right: 6px;
+
+}
+
+.yoo {
+	height: 60px;
+}
+
+.boffi, .gessi, .lieber {
+	height: 24px;
+	position: relative;
+	top: -32px;
 	opacity: 0.5;
+}
+
+.technogym {
+	height: 38px;
+	position: relative;
+	top: -20px;
+	opacity: 0.5;
+}
+
+.aquam, .miele {
+	filter: url(filters.svg#grayscale); /* Firefox 3.5+ */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+    height: 24px;
+	position: relative;
+	top: -32px;
+}
+
+.opa {
+	opacity: 0.6;
+}
+
+.cisco {
+	filter: url(filters.svg#grayscale); /* Firefox 3.5+ */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+    position: relative;
+    top: -10px;
 }
